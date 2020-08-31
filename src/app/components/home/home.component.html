@@ -1,0 +1,55 @@
+<section>
+    <div id="contenedor_ cabecera">
+        <h1>¡Bienvenido!</h1>
+        <div id="textos">
+            <h2>a Prueba C</h2>
+            <p>
+                Cuidamos mucho nuestra Identidad Corporativa, por tal motivo, te invitamos a revisa esta guía de color para que respetes nuestros lineamientos.
+            </p>
+        </div>
+    </div>
+    <div id="contenedor_colores" class="d-flex p-2 col-example">
+       <div id="content_titulo">
+            <div id="icono_titulo">
+                <img src="../../../assets/images/icono.png" alt="Paleta de colores" />
+            </div>
+            <div id="titulo">
+                Guía de colores Institucionales
+            </div>
+       </div>
+    </div>
+    <div id="color_gris_content">
+        <div class="d-flex p-2 col-example"  >
+            <div class="content_colors flex-fill" *ngFor="let color of colores| paginate: { itemsPerPage: 3, currentPage: p }">
+                <div id="{{color.name}}" class="p-2 flex-fill" placement="top" ngbTooltip="¿Deseas ocuparme? Da clic para copiar mis valores" tooltipClass="tooltip" [openDelay]="100" [closeDelay]="200" (click)="openVerticallyCentered(content)" >
+                    <div id="container" [ngxClipboard]="container">
+                        <h3>{{color.name}}</h3 >
+                       <ul>
+                           <li>Hexadecimal: {{color.color}}</li>
+                           <li>Año: {{color.year}}</li>
+                           <li>Pantone: {{color.pantone}}</li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pagination">   
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+</section>
+
+<ng-template #content let-modal >
+    <div class="modal-header">
+      <h4 class="modal-title">¡Datos Copiados!</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Los Datos de fueron copiados exitosamente</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>

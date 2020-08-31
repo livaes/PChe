@@ -1,0 +1,21 @@
+
+$blanco:#fff;
+$negro:#000;
+$cien:100%;
+$setenta:70%;
+$centrar: 0 auto;
+$zero:0;
+
+
+*{
+    margin:$zero;
+    padding:$zero;
+}
+
+body{
+    font-family: 'Blinker', sans-serif;
+
+}
+footer{
+    color:$blanco;
+}

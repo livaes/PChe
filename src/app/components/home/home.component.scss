@@ -1,0 +1,103 @@
+$cien:100%;
+$setenta:70%;
+$centrar: 0 auto;
+$gris:#F4F4F4;
+$morado:#9C41B7;
+$zero:0;
+$fuchsia:#C74375;
+$cerulan:#98B2D1;   
+$truered:#BF1932;
+$aqua:#7BC4C4;
+$tigerlily:#E2583E;
+$blue:#53B0AE;
+
+section{
+    width:$setenta;
+    margin:$centrar;
+    font-family: 'Blinker', sans-serif!important;
+}
+#contenedor_ cabecera{
+    width:$cien;
+    h1, h2{
+        font-weight: bold;
+        text-align: center;
+    }
+    p{
+        text-align: center!important;
+        font-size: 1.5em!important;
+    }
+}
+
+#contenedor_colores{
+    width:$cien;
+    #content_titulo{
+        background:$morado;
+        min-height: 75px;
+        margin:$zero;
+        padding:$zero;
+        width:$cien;
+        #icono_titulo{
+            width:4%;
+            float: left;
+            margin:2%;
+        }
+        #titulo{
+            color:#fff;
+            font-weight: bold;
+            font-size:1.2em;
+            margin:2% 0;
+        }
+    }
+
+}
+#color_gris_content{
+    width:$cien;
+    background:$gris;
+    color:#fff;
+    
+    .content_colors{
+        display: flex;
+        align-items: center;
+        ul li{
+            list-style: none;
+        }
+        #Cerulean{
+            background:$cerulan;
+            width:400px;
+            height:400px;
+            margin:1.1em;
+        }
+        #FuchsiaRose{
+            background:$fuchsia;
+            width:400px;
+            height:400px;
+            margin:1.1em;
+        }
+        #TrueRed{
+            background:$truered;
+            width:400px;
+            height:400px;
+            margin:1.1em;
+        }
+        #AquaSkyn{
+            background:$aqua;
+            width:400px;
+            height:400px;
+            margin:1.1em;
+        }
+        #Tigerlily{
+            background:$tigerlily;
+            width:400px;
+            height:400px;
+            margin:1.1em;
+        }
+        #BlueTurquoise {
+            background:$blue;
+            width:400px;
+            height:400px;
+            margin:1.1em;
+        }
+    }
+    
+}
+
