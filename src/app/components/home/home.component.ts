@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import { ClipboardService } from 'ngx-clipboard';
+import { ClipboardModule } from 'ngx-clipboard';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -31,12 +31,13 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent implements OnInit {
 
+  
   closeResult: string;
   public colores: Array <any>;
   p: number = 1;
 
 
-  constructor(private _clipboardService: ClipboardService, private modalService: NgbModal ) { 
+  constructor(private modalService: NgbModal ) { 
 
     this.colores =[
       {name: "Cerulean", year :2000, colo:"#98B2D1", pantone: "15-4020" },
@@ -45,41 +46,26 @@ export class HomeComponent implements OnInit {
       {name: "AquaSkyn", year :2003, colo:"#7BC4C4", pantone: "14-4811" },
       {name: "Tigerlily", year :2004, colo:"#E2583E", pantone: "17-1456" },
       {name: "BlueTurquoise", year :2005, colo:"#53B0AE", pantone: "15-5217" }
-    ]
-    
+    ];
   }
 
   ngOnInit(): void {
-  }
+   
+}
 
-  copy(text: string){
-    this._clipboardService.copyFromContent(text)
+  copy_data(container) {
+    var range = document.createRange();
+    range.selectNode(container); 
+    window.getSelection().removeAllRanges(); 
+    window.getSelection().addRange(range); 
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("data copied");
   }
-  openBackDropCustomClass(content) {
-    this.modalService.open(content, {backdropClass: 'light-blue-backdrop'});
-  }
-
-  openWindowCustomClass(content) {
-    this.modalService.open(content, { windowClass: 'dark-modal' });
-  }
-
-  openSm(content) {
-    this.modalService.open(content, { size: 'sm' });
-  }
-
-  openLg(content) {
-    this.modalService.open(content, { size: 'lg' });
-  }
-
-  openXl(content) {
-    this.modalService.open(content, { size: 'xl' });
-  }
-
   openVerticallyCentered(content) {
     this.modalService.open(content, { centered: true });
+    
   }
 
-  openScrollableContent(longContent) {
-    this.modalService.open(longContent, { scrollable: true });
-  }
+
 }

@@ -2,9 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from './app.routing';
 import { NgxPaginationModule } from 'ngx-pagination';
-import {ClipboardModule} from 'ngx-clipboard';
-import { ClipboardService } from 'ngx-clipboard';
-
+import { ClipboardModule } from 'ngx-clipboard';
 
 
 
@@ -16,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ModalColorComponent } from './components/modal-color/modal-color.component';
 import { NoexistoComponent } from './components/noexisto/noexisto.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,8 @@ import { NoexistoComponent } from './components/noexisto/noexisto.component';
     NgbModule,
     routing,
     NgxPaginationModule,
-    ClipboardModule
+    ClipboardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

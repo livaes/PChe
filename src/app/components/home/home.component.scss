@@ -15,8 +15,9 @@ section{
     width:$setenta;
     margin:$centrar;
     font-family: 'Blinker', sans-serif!important;
+    padding:1% 0;
 }
-#contenedor_ cabecera{
+#contenedor_cabecera{
     width:$cien;
     h1, h2{
         font-weight: bold;
@@ -101,3 +102,18 @@ section{
     
 }
 
+.btn button{
+    background:#9C41B7;
+    color:#000;
+    text-align: center;
+    border:none;
+    padding:4%;
+    width:140%;
+    border-radius: 3px;
+    transition: all ease-in-out;
+   
+}
+button:hover{
+    background:#9C41B7;
+    color:#fff;
+}

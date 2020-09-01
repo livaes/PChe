@@ -1,8 +1,8 @@
 <section>
-    <div id="contenedor_ cabecera">
+    <div id="contenedor_cabecera">
         <h1>¡Bienvenido!</h1>
         <div id="textos">
-            <h2>a Prueba C</h2>
+            <h2>Prueba C</h2>
             <p>
                 Cuidamos mucho nuestra Identidad Corporativa, por tal motivo, te invitamos a revisa esta guía de color para que respetes nuestros lineamientos.
             </p>
@@ -18,38 +18,38 @@
             </div>
        </div>
     </div>
-    <div id="color_gris_content">
-        <div class="d-flex p-2 col-example"  >
-            <div class="content_colors flex-fill" *ngFor="let color of colores| paginate: { itemsPerPage: 3, currentPage: p }">
-                <div id="{{color.name}}" class="p-2 flex-fill" placement="top" ngbTooltip="¿Deseas ocuparme? Da clic para copiar mis valores" tooltipClass="tooltip" [openDelay]="100" [closeDelay]="200" (click)="openVerticallyCentered(content)" >
-                    <div id="container" [ngxClipboard]="container">
+    <div id="color_gris_content" >
+        <div class="d-flex p-2 col-example" >
+            <div class="content_colors flex-fill" *ngFor="let color of colores | paginate: { itemsPerPage: 3, currentPage: p }">
+                <div  id="{{color.name}}" class="p-2 flex-fill">
+                    <div #container>
                         <h3>{{color.name}}</h3 >
                        <ul>
-                           <li>Hexadecimal: {{color.color}}</li>
+                           <li>Hexadecimal:{{color.colo}}</li>
                            <li>Año: {{color.year}}</li>
                            <li>Pantone: {{color.pantone}}</li>
                        </ul>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
     <div id="pagination">   
         <pagination-controls (pageChange)="p = $event"></pagination-controls>
-      </div>
+    </div>
+    <div class="btn">
+        <button (click)="openVerticallyCentered(content)" >Copiar valores</button>
+    </div>
 </section>
-
-<ng-template #content let-modal >
-    <div class="modal-header">
-      <h4 class="modal-title">¡Datos Copiados!</h4>
+<ng-template #content let-modal>
+    <div class="modal-header" >
+      <h4 class="modal-title">¡Colores Copiado!</h4>
       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div class="modal-body">
-      <p>Los Datos de fueron copiados exitosamente</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    <div class="modal-body" *ngFor="let color of colores; let i =index">
+        Los datos del color {{color.name}} han sido copiados
     </div>
   </ng-template>

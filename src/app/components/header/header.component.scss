@@ -5,3 +5,29 @@ header{
     height: 130;
     width: 100%;
 }
+#cabe{
+    width:70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    #logo{
+        float: left;
+        width:30%;
+        position: absolute;
+        top:7%;
+        img{
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+            width:17%;
+        }
+    }
+   #datos{
+        float:left;
+        width:100%;
+        padding:2% 0 0 0;
+        h1, h4{
+            text-align: center;
+        }
+    }
+    
+}
