@@ -4,9 +4,9 @@ Está aplicación te muestra los códigos de los colores Institucionales de la E
 
 Las teconolgías que se usaron para esta prueba son:
 
-HTML5
-SASS
-Framework Angular CLI10
+HTML5| 
+SASS |
+Framework Angular CLI10 
 
 Los módulos utilizados son:
 
@@ -19,6 +19,8 @@ npm i ngx-pagination
 ng i @ng-bootstrap/ng-bootstrap
 
 ng serve para compilar el proyecto una vez desacargado e instalados los módulos.
+
+URL del repositorio en GitHub : https://github.com/livaes/PChe
 
 URL de deploy:
 
