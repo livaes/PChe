@@ -20,7 +20,7 @@
     </div>
     <div id="color_gris_content" >
         <div class="d-flex p-2 col-example" >
-            <div class="content_colors flex-fill" *ngFor="let color of colores | paginate: { itemsPerPage: 6, currentPage: p }">
+            <div class="content_colors flex-fill" *ngFor="let color of colores | paginate: { itemsPerPage: 3, currentPage: p }">
                 <div  id="{{color.name}}" class="p-2 flex-fill">
                     <div #container>
                         <h3>{{color.name}}</h3 >
