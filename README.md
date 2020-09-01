@@ -22,5 +22,5 @@ ng serve para compilar el proyecto una vez desacargado e instalados los módulos
 
 URL del repositorio en GitHub : https://github.com/livaes/PChe
 
-URL de deploy:
+URL de deploy: https://app-pruebachedraui.herokuapp.com/
 
