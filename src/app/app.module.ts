@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { routing, appRoutingProviders } from './app.routing';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { HttpClientModule } from '@angular/common/http';
 import {ClipboardModule} from 'ngx-clipboard';
 import { ClipboardService } from 'ngx-clipboard';
 
@@ -31,10 +29,8 @@ import { NoexistoComponent } from './components/noexisto/noexisto.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot(),
     NgbModule,
-    routing, 
-    HttpClientModule,
+    routing,
     NgxPaginationModule,
     ClipboardModule
   ],
