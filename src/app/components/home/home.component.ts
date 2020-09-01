@@ -45,6 +45,12 @@ export class HomeComponent implements OnInit {
       {name: "TrueRed", year :2002, colo:"#BF1932", pantone: "19-1664" },
       {name: "AquaSkyn", year :2003, colo:"#7BC4C4", pantone: "14-4811" },
       {name: "Tigerlily", year :2004, colo:"#E2583E", pantone: "17-1456" },
+      {name: "BlueTurquoise", year :2005, colo:"#53B0AE", pantone: "15-5217" },
+      {name: "Cerulean", year :2000, colo:"#98B2D1", pantone: "15-4020" },
+      {name: "FuchsiaRose", year :2001, colo:"#C74375", pantone: "17-2031" },
+      {name: "TrueRed", year :2002, colo:"#BF1932", pantone: "19-1664" },
+      {name: "AquaSkyn", year :2003, colo:"#7BC4C4", pantone: "14-4811" },
+      {name: "Tigerlily", year :2004, colo:"#E2583E", pantone: "17-1456" },
       {name: "BlueTurquoise", year :2005, colo:"#53B0AE", pantone: "15-5217" }
     ];
   }
